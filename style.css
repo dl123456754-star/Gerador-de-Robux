@@ -1,0 +1,111 @@
+/* Fundo anime */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('fundo-anime.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* Caixa central */
+.container {
+    width: 400px;
+    margin: 80px auto;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+/* Títulos */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00ffcc;
+    text-shadow: 1px 1px 5px black;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Botão */
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #00ffcc, #00a88f);
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* Mensagens */
+#mensagem {
+    margin-top: 20px;
+    min-height: 50px;
+    font-weight: bold;
+}
+
+#mensagem.success { color: #00ff99; }
+#mensagem.error { color: #ff5555; }
+#mensagem.alert { color: #ffcc00; }
+
+/* Contador */
+#contador {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+/* Robux caindo */
+#robux-fall {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.robux {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('https://i.imgur.com/4P3l3jS.png'); /* ícone de Robux */
+    background-size: cover;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    0% {transform: translateY(-50px);}
+    100% {transform: translateY(100vh);}
+}
